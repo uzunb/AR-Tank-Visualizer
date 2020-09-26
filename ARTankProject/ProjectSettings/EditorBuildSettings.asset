@@ -8,4 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MS/T95/Scene/totalAsset.unity
     guid: fe20677fc7396c041826d4d4d6376f3a
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 03428ce7a97894f4488d6d23defdb146,
+      type: 2}

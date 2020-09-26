@@ -1,15 +1,16 @@
 {
-    "scopedRegistries": [
-        {
-            "name": "Vuforia",
-            "url": "https://registry.packages.developer.vuforia.com/",
-            "scopes": [
-                "com.ptc.vuforia"
-            ]
-        }
-    ],
-    "dependencies": {
+  "scopedRegistries": [
+    {
+      "name": "Vuforia",
+      "url": "https://registry.packages.developer.vuforia.com/",
+      "scopes": [
+        "com.ptc.vuforia"
+      ]
+    }
+  ],
+  "dependencies": {
     "com.ptc.vuforia.engine": "9.4.6",
+    "com.unity.2d.sprite": "1.0.0",
     "com.unity.collab-proxy": "1.2.16",
     "com.unity.ide.rider": "1.1.4",
     "com.unity.ide.vscode": "1.2.1",
@@ -17,6 +18,8 @@
     "com.unity.textmeshpro": "2.1.1",
     "com.unity.timeline": "1.2.16",
     "com.unity.ugui": "1.0.0",
+    "com.unity.xr.interactionsubsystems": "1.0.1",
+    "com.unity.xr.management": "3.2.15",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
