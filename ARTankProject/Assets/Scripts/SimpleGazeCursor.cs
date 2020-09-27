@@ -7,7 +7,9 @@ public class SimpleGazeCursor : MonoBehaviour {
     public Camera viewCamera;
     public GameObject cursorPrefab;
     public float maxCursorDistance = 30;
-    public Text tooltiptext;
+    public Text tooltipText;
+
+    public GameObject theTank;
 
     private GameObject cursorInstance;
 
@@ -31,17 +33,19 @@ public class SimpleGazeCursor : MonoBehaviour {
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, Mathf.Infinity))
         {
+            //if (theTank == hit.collider.gameObject)
+            //    tooltipText.text = "The ray hit to the tank";
             // If the ray hits something, set the position to the hit point and rotate based on the normal vector of the hit
             cursorInstance.transform.position = hit.point;
             cursorInstance.transform.rotation = Quaternion.FromToRotation(Vector3.up, hit.normal);
-            tooltiptext.text = "The ray hit something.";
+            tooltipText.text = "The ray hit something.";
         }
         else
         {
             // If the ray doesn't hit anything, set the position to the maxCursorDistance and rotate to point away from the camera
             cursorInstance.transform.position = ray.origin + ray.direction.normalized * maxCursorDistance;
             cursorInstance.transform.rotation = Quaternion.FromToRotation(Vector3.up, -ray.direction);
-            tooltiptext.text = "The ray doesn't hit anything.";
+            tooltipText.text = "The ray doesn't hit anything.";
         }
     }
 }
