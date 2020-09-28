@@ -12,7 +12,7 @@ Vuforia is an add-on that can be used in the Unity game engine.
    - [x] Scale the model
 
 ###### Tank motion animation
-- [ ] Move forward animation
+- [x] Move forward animation
 - [ ] Move / drive the tank over the specified ground.
 - [ ] Aiming and shooting with the tank.
 - [ ] Bullet firing effects
