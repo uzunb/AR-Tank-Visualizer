@@ -3,24 +3,12 @@ using System.Collections;
 public class ObjectScalling : MonoBehaviour
 {
 
-    //private GameObject selectedObject;
-    public GameObject selectedObject;
     public float sensitivity = 0.01f;
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.touchCount == 0)
-        {
-            Touch touch = Input.touches[0];
-            Ray ray = Camera.main.ScreenPointToRay(touch.position);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit, 100f))
-            {
-                selectedObject = hit.collider.gameObject;
-            }
-        }
+        
         if (Input.touchCount == 2)
         {
             // Store both touches.
@@ -37,11 +25,11 @@ public class ObjectScalling : MonoBehaviour
 
             // Find the difference in the distances between each frame.
             float deltaMagnitudeDiff = (prevTouchDeltaMag - touchDeltaMag) * sensitivity;
-            float newScaleObject = selectedObject.transform.localScale.x - deltaMagnitudeDiff;
+            float newScaleObject = transform.localScale.x - deltaMagnitudeDiff;
 
             //The object can not in opposite direction.
             if (newScaleObject > 0)
-                selectedObject.transform.localScale = new Vector3(newScaleObject, newScaleObject, newScaleObject);
+                transform.localScale = new Vector3(newScaleObject, newScaleObject, newScaleObject);
 
         }
     }
