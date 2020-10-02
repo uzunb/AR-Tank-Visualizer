@@ -45,6 +45,24 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.render-pipelines.core": {
+      "version": "7.5.1",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.shadergraph": {
+      "version": "7.5.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.render-pipelines.core": "7.5.1"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.subsystemregistration": {
       "version": "1.0.6",
       "depth": 1,
@@ -87,6 +105,15 @@
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
+    },
+    "com.unity.visualeffectgraph": {
+      "version": "7.5.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.shadergraph": "7.5.1"
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.xr.interactionsubsystems": {
       "version": "1.0.1",

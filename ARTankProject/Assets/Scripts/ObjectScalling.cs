@@ -2,7 +2,8 @@
 using System.Collections;
 public class ObjectScalling : MonoBehaviour
 {
-
+    public ParticleSystem Lsmoke;
+    public ParticleSystem Rsmoke;
     public float sensitivity = 0.01f;
     // Update is called once per frame
     void Update()
@@ -26,10 +27,14 @@ public class ObjectScalling : MonoBehaviour
             // Find the difference in the distances between each frame.
             float deltaMagnitudeDiff = (prevTouchDeltaMag - touchDeltaMag) * sensitivity;
             float newScaleObject = transform.localScale.x - deltaMagnitudeDiff;
+            float newSmokeScaleObject = Lsmoke.transform.localScale.x - deltaMagnitudeDiff;
 
             //The object can not in opposite direction.
-            if (newScaleObject > 0)
+            if (newScaleObject > 0 || newSmokeScaleObject > 0){
                 transform.localScale = new Vector3(newScaleObject, newScaleObject, newScaleObject);
+                Lsmoke.transform.localScale = new Vector3(newSmokeScaleObject, newSmokeScaleObject, newSmokeScaleObject);
+                Rsmoke.transform.localScale = new Vector3(newSmokeScaleObject, newSmokeScaleObject, newSmokeScaleObject);
+            }
 
         }
     }

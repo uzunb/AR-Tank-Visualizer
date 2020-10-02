@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class ScroolTexture : MonoBehaviour
 {
-    public float scroolX =0.05f;
-
-
+    private float scroolX = 0.25f;
     // Update is called once per frame
     void Update()
     {
