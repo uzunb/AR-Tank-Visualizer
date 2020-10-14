@@ -4,7 +4,7 @@ public class ObjectScalling : MonoBehaviour
 {
     public ParticleSystem Lsmoke;
     public ParticleSystem Rsmoke;
-    public float sensitivity = 0.01f;
+    public float sensitivity = 0.001f;
     // Update is called once per frame
     void Update()
     {
@@ -30,7 +30,7 @@ public class ObjectScalling : MonoBehaviour
             float newSmokeScaleObject = Lsmoke.transform.localScale.x - deltaMagnitudeDiff;
 
             //The object can not in opposite direction.
-            if (newScaleObject > 0 || newSmokeScaleObject > 0){
+            if (newScaleObject > 0.4f || newSmokeScaleObject > 0.4f){
                 transform.localScale = new Vector3(newScaleObject, newScaleObject, newScaleObject);
                 Lsmoke.transform.localScale = new Vector3(newSmokeScaleObject, newSmokeScaleObject, newSmokeScaleObject);
                 Rsmoke.transform.localScale = new Vector3(newSmokeScaleObject, newSmokeScaleObject, newSmokeScaleObject);
