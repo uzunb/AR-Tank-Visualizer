@@ -1,4 +1,4 @@
-# Augmented Reality Tank Visualiser
+# Augmented Reality Tank Visualizer
 
 #### The mobile application was made in Unity with Vuforia, a Unity extension. Contain tank visualizer and moves by finger gestures. 
 
